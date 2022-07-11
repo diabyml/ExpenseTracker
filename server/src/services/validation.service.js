@@ -11,4 +11,13 @@ function isCredentialValid(user) {
   return user.email && user.password;
 }
 
-module.exports = { isValidUser, validateEmail, isCredentialValid };
+function isTransactionValid(transaction) {
+  return transaction.by && transaction.expenses;
+}
+
+module.exports = {
+  isValidUser,
+  validateEmail,
+  isCredentialValid,
+  isTransactionValid,
+};
